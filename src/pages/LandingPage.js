@@ -7,7 +7,6 @@ import Footer from "parts/Footer";
 
 import landingPage from "json/landingPage";
 import Categories from "parts/Categories";
-
 export default class LandingPage extends Component {
   constructor(props) {
     super(props);
