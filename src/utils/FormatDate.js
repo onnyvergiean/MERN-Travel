@@ -1,4 +1,4 @@
-export default (date) => {
+export default function FormatDate(date) {
   const d = new Date(date);
   const dtf = new Intl.DateTimeFormat("en", {
     year: "numeric",
@@ -9,4 +9,4 @@ export default (date) => {
 
   return `${da} ${mo}`;
   // return date;
-};
+}
