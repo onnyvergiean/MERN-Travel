@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-
 import Header from "parts/Header";
 import PageDetailTitle from "parts/PageDetailTitle";
 import ItemDetails from "json/itemDetails.json";
@@ -9,6 +8,7 @@ import BookingForm from "parts/BookingForm";
 import Categories from "parts/Categories";
 import Testimony from "parts/Testimony";
 import Footer from "parts/Footer";
+import Fade from "react-reveal/Fade";
 
 export default class DetailsPage extends Component {
   componentDidMount() {
@@ -34,7 +34,9 @@ export default class DetailsPage extends Component {
               <PageDetailDescription data={ItemDetails} />
             </div>
             <div className="col-5">
-              <BookingForm ItemDetails={ItemDetails} />
+              <Fade bottom>
+                <BookingForm ItemDetails={ItemDetails} />
+              </Fade>
             </div>
           </div>
         </section>
