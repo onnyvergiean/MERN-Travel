@@ -6,7 +6,7 @@ export default function Categories({ data }) {
   return data.map((category, index1) => {
     if (category.itemId.length === 0) return null;
     return (
-      <section className="container" key={`category${index1}`}>
+      <section className="container" key={`category-${index1}`}>
         <Fade bottom>
           <h4 className="mb-3 font-weight-medium">{category.name}</h4>
           <div className="container-grid">
@@ -41,7 +41,7 @@ export default function Categories({ data }) {
                           href={`/properties/${item._id}`}
                           className="stretched-link d-block text-gray-800"
                         >
-                          <h5 className="h4">{item.name}</h5>
+                          <h5 className="h4">{item.title}</h5>
                         </Button>
                         <span className="text-gray-500">
                           {item.city},{item.country}
