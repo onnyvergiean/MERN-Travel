@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import Fade from "react-reveal/Fade";
 import { connect } from "react-redux";
-
 import Header from "parts/Header";
 import PageDetailTitle from "parts/PageDetailTitle";
 import FeaturedImages from "parts/FeaturedImages";
@@ -20,7 +19,7 @@ class DetailsPage extends Component {
     window.scrollTo(0, 0);
     if (!this.props.page[this.props.match.params.id]) {
       this.props.fetchPage(
-        `${process.env.REACT_APP_HOST}/api/v1/member/detail-page/${this.props.match.params.id}`,
+        `/detail-page/${this.props.match.params.id}`,
         this.props.match.params.id
       );
     }
